@@ -1,0 +1,47 @@
+.hex {
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    @apply
+    flex
+    justify-center
+    drop-shadow-2xl
+}
+
+.hexImage{
+    @apply
+    relative
+    w-[30vh] h-[35vh]
+    /*overflow-hidden*/
+    drop-shadow-2xl
+}
+
+.hexText{
+    @apply
+    /*absolute*/
+    relative
+    h-full
+    flex
+    flex-col
+    flex-nowrap
+    justify-center
+    items-center
+    text-white
+}
+
+.hexText:group-hover{
+    @apply
+    relative
+}
+
+.hexName{
+    @apply
+    text-2xl
+    flex
+    text-center
+    justify-center
+    mx-auto
+    border-b-2 border-primary
+    lowercase
+}
+
+

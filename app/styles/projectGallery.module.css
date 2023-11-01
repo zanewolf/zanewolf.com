@@ -1,0 +1,69 @@
+.galleryLayout{
+    @apply
+    w-full
+    h-auto
+    flex flex-col flex-nowrap
+    px-4
+    items-center
+}
+
+.selectFormDiv{
+    @apply
+    min-h-[20vh]
+    m-auto
+    items-center
+    text-3xl lg:text-4xl
+    flex flex-row justify-center
+    mt-16
+    lowercase
+    pr-4 pt-2
+    text-3xl text-primary
+}
+
+.galleryCards{
+    @apply
+    flex
+    flex-row
+    flex-wrap
+    justify-evenly
+    items-center
+    gap-4
+    pb-10
+    mx-4
+}
+
+
+/*.MuiOutlinedInput-root.MuiInputBase-colorPrimary{*/
+/*    color: white;*/
+/*}*/
+
+/*.MuiSelect-select{*/
+/*    padding: 0 14px;*/
+
+/*}*/
+/*.MuiOutlinedInput-root {*/
+/*    !*box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;*!*/
+/*    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 6px 0px, rgba(0, 0, 0, 0.15) 0px 4px 6px 1px;*/
+/*    !*font-size: unset;*!*/
+/*    !*color:unset;*!*/
+/*    border: 0;*/
+
+/*}*/
+
+/*.MuiMenuItem-root{*/
+/*    !*color: white;*!*/
+/*    !*font-size: 2em;*!*/
+/*    !*transition: ease-in-out;*!*/
+/*    !*transition-duration: 500;*!*/
+/*    !*padding-top: 2em;*!*/
+/*}*/
+
+/*.MuiList-root{*/
+/*    margin-top: 1em;*/
+/*}*/
+/*.MuiPaper-root {*/
+/*    !*background-color: rgba(22, 22, 25, 0.95);*!*/
+/*    !*filter: blur(0.7);*!*/
+/*    margin-top:0.5em;*/
+
+/*}*/

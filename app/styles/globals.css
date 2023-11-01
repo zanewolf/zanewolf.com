@@ -1,0 +1,320 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+html,body{
+  height: 100%;
+  width: 100%;
+  /*background: linear-gradient(to top, #838888 0%, white 100%);*/
+  /*width: 100%;*/
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  /*scrollbar-gutter: stable both-edges;*/
+  @apply
+  text-primary
+}
+.content{
+}
+.footer {
+  @apply
+  bg-primary
+  text-white
+  mt-auto
+  h-auto
+  flex
+  flex-col
+  justify-around
+  pb-2
+}
+.footerContent{
+  @apply
+  flex
+  flex-row
+  justify-around
+  mb-4
+}
+
+.footerSection{
+  @apply
+  pt-6
+}
+
+.footerSection > h2{
+  @apply
+  border-b-2 border-white
+  my-4
+  flex flex-col
+  h-10
+  text-base
+  md:text-lg
+}
+
+
+.quickLinks{
+  @apply
+  flex flex-col
+  gap-2
+  justify-center
+  m-auto
+  text-base
+  md:text-lg
+}
+
+.connectApps{
+  @apply
+  flex
+  flex-row
+  justify-evenly
+  md:text-4xl
+  m-auto
+  text-4xl
+
+}
+
+.copyright{
+  @apply
+  flex
+  mx-auto
+  justify-items-center
+  text-zinc-300
+}
+
+.footerSection h2{
+  @apply
+  text-2xl
+}
+
+
+h1, h2 {
+  @apply
+  font-bold
+  /*text-primary*/
+  text-lg;
+}
+main {
+  @apply
+  max-w-full
+  my-12
+  mx-auto
+  px-8;
+}
+main > h2 {
+  @apply
+  mb-4
+  pb-2
+  text-base ;
+}
+p > a {
+  @apply text-primary underline;
+}
+
+/* nav styles */
+header {
+  @apply
+  z-20
+  /*sticky*/
+  /*top-0*/
+  /*h-[7vh]*/
+}
+nav {
+  @apply
+  w-full
+  flex
+  flex-row
+  justify-between
+  h-[10vh]
+  m-auto
+  p-4
+  /*border-b-2 border-primary border-opacity-30*/
+  /*bg-white*/
+}
+
+
+.logo{
+  @apply
+  w-auto
+  text-5xl
+  md:pt-0
+  md:text-6xl
+  z-20
+}
+
+.nav__menu-bar{
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+  cursor: pointer;
+  @apply
+  pr-2
+  pt-2
+}
+.nav__menu-bar div{
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  /*@apply*/
+  /*bg-primary*/
+}
+.nav__menu-list{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 80px;
+  width: 100%;
+  row-gap: 40px;
+  right: -100%;
+  padding: 24px 16px;
+  transition: all 0.2s;
+  min-height: calc(100vh - 80px);
+  background-color: #f1f1f1;
+  align-content: center;
+  text-align: center;
+  margin: auto;
+}
+.nav__menu-list.active{
+  right: 0;
+}
+.nav__link{
+  /*font-size: 18px;*/
+  position: relative;
+  transition: all 0.2s;
+  @apply
+  text-2xl
+}
+
+/*.nav__link.active{*/
+/*  @apply*/
+/*  font-bold*/
+/*}*/
+
+.nav__link:hover{
+  font-weight: bold;
+}
+
+.center{
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .nav__menu-bar{
+    display: none;
+  }
+  .nav__menu-list{
+    position: unset;
+    flex-direction: row;
+    min-height: fit-content;
+    width: fit-content;
+    column-gap: 24px;
+    align-items: center;
+    @apply
+      bg-white
+    text-xl
+    m-0
+  }
+  .nav__link::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 6px;
+    bottom: -16px;
+    left: 0;
+    /*background-color: black;*/
+    transition: all 0.2s;
+  }
+
+  .nav__link:hover:before{
+    width: 100%;
+  }
+}
+
+
+nav a:hover {
+  @apply
+  scale-110
+  duration-200
+  font-bold
+}
+main nav {
+  @apply border-0;
+}
+
+/* button styles */
+button {
+  @apply
+  px-3 py-2
+  rounded-lg
+  flex justify-between items-center gap-2
+  /*text-sm;*/
+}
+button:hover {
+  @apply bg-opacity-90;
+}
+.btn-primary {
+  @apply bg-primary text-white;
+}
+.btn-secondary {
+  @apply bg-gray-200 text-gray-900;
+}
+
+/* form styles */
+/*form {*/
+/*  @apply*/
+/*  py-4 px-7*/
+/*  bg-primary*/
+/*  bg-opacity-5*/
+/*  rounded-md*/
+/*  block*/
+/*  mx-auto*/
+/*  min-w-fit w-1/4;*/
+/*}*/
+/*form label {*/
+/*  @apply block;*/
+/*}*/
+/*form input,*/
+/*form textarea,*/
+/*form select {*/
+/*  @apply*/
+/*  block*/
+/*  mt-2 my-4 px-2 py-1*/
+/*  rounded-sm w-full;*/
+/*}*/
+/*form button {*/
+/*  @apply block mx-auto;*/
+/*}*/
+
+/* feedback styles */
+.error {
+  @apply
+  border-2
+  border-red-500
+  bg-red-300
+  text-red-800
+  py-1 px-2
+  rounded-sm
+  block
+  max-w-fit
+  my-4 mx-auto;
+}
+
+
+
+
+
+

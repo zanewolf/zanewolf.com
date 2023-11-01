@@ -1,0 +1,212 @@
+
+.homePage{
+    @apply
+    min-h-full
+    h-auto
+    m-auto
+}
+
+.landingSection{
+    @apply
+    min-h-[80vh]
+    h-auto
+    m-auto
+    text-center
+    justify-items-center
+}
+
+.auxHex{
+    @apply
+    w-[15vw]
+    md:w-[5vw]
+    drop-shadow-[7px_10px_15px_rgba(0,0,0,0.5)]
+    mr-64
+    ml-auto
+    mt-24
+}
+
+.auxHex1{
+    @apply
+    w-[25vw]
+    md:w-[12vw]
+    drop-shadow-[7px_10px_15px_rgba(0,0,0,0.5)]
+    -mt-24
+    md:-mt-56
+    ml-52
+    md:ml-32
+}
+
+.auxHex2{
+    @apply
+    w-[15vw]
+    md:w-[10vw]
+    drop-shadow-[7px_10px_15px_rgba(0,0,0,0.5)]
+    mr-[35vw]
+    ml-auto
+    mb-12
+}
+
+.selectedProjects{
+    @apply
+    min-h-[90vh]
+    h-auto
+    m-auto
+    flex
+    flex-col
+    flex-nowrap
+    justify-evenly
+    justify-items-center
+    text-center
+    pb-10
+}
+
+.selectedProjects > h2{
+    @apply
+    text-4xl
+    text-center
+    mt-auto
+    p-8
+
+}
+
+.sectionTitle{
+    @apply
+    mb-20
+}
+
+.selectedProjectHexes{
+    @apply
+    flex
+    w-full
+    /*w-auto*/
+    /*m-auto*/
+    flex-row flex-wrap
+    justify-evenly
+    gap-2
+}
+
+.selectedProjects button{
+    @apply
+    w-1/6
+    text-2xl
+    mx-auto
+}
+
+.projectButton{
+    @apply
+    cursor-pointer
+    flex justify-center
+    m-auto max-w-[50vw]
+    md:max-w-[30vw]
+    w-auto
+    text-primary
+    text-xl md:text-2xl
+    p-2 mt-8 md:mt-12 lg:mt-24
+    rounded-2xl duration-200 border-2 border-primary hover:scale-110 duration-200
+}
+
+.titleContent{
+    @apply
+    flex
+    flex-col
+    items-center
+    justify-center
+    overflow-x-hidden
+    min-h-[80vh]
+    -mt-32
+    /*md:pt-80*/
+    /*md:mb-32*/
+}
+
+.greeting{
+    @apply
+    mb-5 flex-wrap
+    /*drop-shadow-[4px_4px_5px_rgba(0,0,0,0.2)]*/
+}
+
+.greeting h1{
+    @apply text-5xl text-primary
+}
+
+.titleContentContainer {
+    height: 50px;
+    /*z-index:-20;*/
+    @apply inline-flex overflow-hidden font-semibold text-5xl items-center mt-1
+}
+
+.blinker {
+    margin: 0 1rem;
+    animation-name: title-opacity;
+    animation-duration: 1.66s;
+    animation-iteration-count: infinite;
+    z-index: -5;
+    @apply
+    text-primary
+}
+.titleContentContainerList {
+    animation-name: title-change;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    @apply
+    text-center list-none
+    text-5xl
+}
+
+@keyframes title-opacity {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes title-change {
+    0%,
+    15%,
+    100% {
+        transform: translate3d(0, 35%, 0);
+    }
+    17%,
+    31% {
+        transform: translate3d(0, 11%, 0);
+    }
+    35%,
+    47% {
+        transform: translate3d(0, -12%, 0);
+    }
+    51%,
+    64% {
+        transform: translate3d(0, -35%, 0);
+    }
+    66.64%,
+    79.3% {
+        transform: translate3d(0, -12%, 0);
+    }
+    83.3%,
+    95.96% {
+        transform: translate3d(0, 11%, 0);
+    }
+}
+
+.projectForm fieldset{
+    border: none;
+}
+
+.projectForm svg{
+    /*color:white;*/
+    visibility: hidden;
+}
+
+#demo-simple-select-autowidth{
+    /*padding-top:4px*/
+    padding: unset;
+    min-height: unset;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+
+
